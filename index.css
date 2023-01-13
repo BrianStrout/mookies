@@ -1,0 +1,43 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --vw-padding: 10vw;
+}
+.site-shell {
+  height: 300vh;
+}
+
+.header {
+  width: 100vw;
+  background-color: rgb(162, 226, 226);
+  padding: 2.5vw 2.5vw;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.letter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--vw-padding);
+  height: var(--vw-padding);
+  background-color: rgb(194, 164, 222);
+  border: 1px solid black;
+
+  font-size: 10vw;
+}
+.stucco {
+  position: fixed;
+  left: calc(2.5vw + 5px + var(--vw-padding));
+  color: pink;
+}
+
+.link-box {
+  position: fixed;
+  right: calc(2.5vw + 5px);
+  color: pink;
+}
