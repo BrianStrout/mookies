@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./scss/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="site-shell">
@@ -14,7 +15,6 @@
           <div class="header">
             <div class="letter-box">M</div>
             <div class="letter-box stucco">
-              O
               <div id="guide-text" class="guide">Home</div>
             </div>
             <div class="letter-box"></div>
@@ -45,10 +45,10 @@
         <div class="greeter">
           <div class="greet-one">
             <div class="open-status">
-              We are <span id="openOrClosed"> mixed</span>
-              <span id="hourExpander">+</span>
+              <pre> We are <span id="openOrClosed"> mixed</span></pre>
+              <div id="expander">+</div>
             </div>
-            <ul id="days-and-hours" class="tuckedUp">
+            <ul id="daysAndHours" class="untucked tuckedUp">
               <li>Friday 7 AM–2 PM</li>
               <li>Saturday 7 AM–2 PM</li>
               <li>Sunday 7 AM–12 PM</li>
@@ -62,32 +62,110 @@
           <div class="greet-two">
             <button>#Order Online</button>
           </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19925.651330610493!2d-70.85431184890015!3d42.50204699545008!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1f80cb13d6095cd!2sMookie&#39;s%20at%20Mugford!5e0!3m2!1sen!2sus!4v1673825551079!5m2!1sen!2sus"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
           Address: 114 Washington St, Marblehead, MA 01945 Hours: Phone: (781)
           990-3282
         </div>
       </div>
 
-      <div class="view-chapter chapter2">
+      <div class="view-chapter padded chapter2">
         <div class="about-us">
-          <div class="picture-us"></div>
-          <h1>Our Story</h1>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-          cum nisi, quisquam recusandae consequuntur tenetur eligendi cumque
-          sapiente necessitatibus dolores doloribus quibusdam accusamus. Eveniet
-          deleniti adipisci magni doloremque, quos voluptatum. Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Beatae aspernatur fugiat in
-          dolorum? Facilis delectus, vitae non quisquam, porro id, dicta
-          pariatur odit laborum molestias repellat at omnis neque excepturi!
+          <div class="picture-us"><h1>Our Story</h1></div>
+          <p class="story-time">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
+            cum nisi, quisquam recusandae consequuntur tenetur eligendi cumque
+            sapiente necessitatibus dolores doloribus quibusdam accusamus.
+            Eveniet deleniti adipisci magni doloremque, quos voluptatum. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae aspernatur
+            fugiat in dolorum? Facilis delectus, vitae non quisquam, porro id,
+            dicta pariatur odit laborum molestias repellat at omnis neque
+            excepturi!
+          </p>
         </div>
         <div class="local-reviews">
           <h1>Locals Love Us</h1>
+          <div class="google-reviews-filled-in">
+            <div class="quote-box">
+              <div class="quote">
+                "Lovely afternoon coffee and apple crumble. Delicious. And super
+                gracious service."
+              </div>
+              <div class="author">- Mary C</div>
+            </div>
+
+            <div class="quote-box">
+              <div class="quote">
+                "Awesome coffee and pastries! Our cashier was so friendly and
+                fun."
+              </div>
+              <div class="author">- Alison S</div>
+            </div>
+
+            <div class="quote-box">
+              <div class="quote">
+                "Avocado and goat cheese toast insanely good. Caramel macchiato
+                delicious (not a low grade syrupy drink). Highly recommend."
+              </div>
+              <div class="author">- john c</div>
+            </div>
+
+            <button id="more-reviews">More <reviews></reviews></button>
+          </div>
+
+          <!-- s -->
         </div>
       </div>
-      <div class="view-chapter chapter3">
+      <div class="view-chapter padded chapter3">
         <div class="links">?</div>
         <div class="boiler-plate-footer"></div>
       </div>
     </div>
+
+    <!-- <script>
+      // Find a placeID via https://developers.google.com/places/place-id
+      googlePlaces("google-reviews", {
+        placeId: "ChIJlTz2W-MV44kRzZVgPbEM-KE",
+        // the following params are optional (default values)
+        header: "<h3>Google Reviews</h3>", // html/text over Reviews
+        footer: "", // html/text under Reviews block
+        maxRows: 6, // max rows of reviews to be displayed
+        minRating: 4, // minimum rating of reviews to be displayed
+        months: [
+          "Jan",
+          "Feb",
+          "Mär",
+          "Apr",
+          "Mai",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dez",
+        ],
+        textBreakLength: "90", // length before a review box is set to max width
+        showDate: false, // renders the date of the review before the review itself
+        shortenNames: true, // example: "Max Mustermann" -> "Max M.""
+        replaceAnonymous: false, // do not replace anonymous author_name from JSON
+        anonymousName: "A Google User", // Google's default value depending on language used (en: "A Google User")
+        anonymousNameReplacement: "User chose to remain anonymous", // replacement for default (never shortens)
+      });
+    </script> -->
   </body>
   <script src="./main.js" type="module"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDYLTaE-mq4jZzSd8DXwWbpOvWsJHSQOaw"></script> -->
+  <!-- <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLTaE-mq4jZzSd8DXwWbpOvWsJHSQOaw&callback=initMap"
+  ></script> -->
 </html>

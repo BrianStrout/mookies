@@ -20,22 +20,3 @@
   height: 100vh;
   scroll-snap-align: start;
 }
-
-.greeter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding-top: 2.5vw;
-  padding-left: 5vw;
-  .greet-one {
-    // background-color: chartreuse;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-  }
-  .greet-two {
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-  }
-}
