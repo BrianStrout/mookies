@@ -19,7 +19,7 @@ const detectPage2 = new IntersectionObserver(function (entries, detectPage2) {
     if (!page.isIntersecting) {
       return;
     } else {
-      guideText.innerHTML = "Page2";
+      guideText.innerHTML = "Our Story";
     }
   });
 }, page_Options);
@@ -29,7 +29,7 @@ const detectPage3 = new IntersectionObserver(function (entries, detectPage2) {
     if (!page.isIntersecting) {
       return;
     } else {
-      guideText.innerHTML = "Page3";
+      guideText.innerHTML = "See You Soon";
     }
   });
 }, page_Options);

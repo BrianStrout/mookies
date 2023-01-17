@@ -1,24 +1,13 @@
 @use "root";
 
-.open-status {
-  // padding: 10px;
-}
+// #hourExpander {
+//   display: inline-block;
+//   // background-color: brown;
+//   margin-left: 20px;
+//   border: 2px solid black;
+//   pointer-events: none;
+// }
 
-#hourExpander {
-  display: inline-block;
-  background-color: brown;
-  margin-left: 20px;
-}
-
-.untucked {
-  max-height: 500px;
-  transition: max-height 1.25s ease-in-out;
-  overflow-y: hidden;
-}
-.tuckedUp {
-  max-height: 0px;
-  overflow-y: hidden;
-}
 .greeter {
   display: flex;
   flex-direction: column;
@@ -31,28 +20,57 @@
     position: relative;
     width: 400px;
     height: 100px;
-    border: 1px solid black;
-    border-radius: var(--border-rad);
+    // border: 1px solid black;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: var(--color-btn);
+    border: 3px solid var(--color-ln);
+    border-radius: var(--border-rad);
     padding-left: 20px;
     padding-right: 20px;
     .open-status {
       width: 100%;
-      background-color: darkkhaki;
+      // background-color: darkkhaki;
       display: flex;
       justify-content: center;
+      font-size: 1.25rem;
+      font-family: var(--handwriting);
     }
   }
+
+  .open-status > pre {
+    font-family: var(--handwriting);
+    pointer-events: none;
+  }
+
   #daysAndHours {
     position: absolute;
     z-index: 2;
-    top: 60%;
-    background-color: antiquewhite;
+    top: 100%;
+    background-color: var(--color-ac);
     list-style: none;
+    border-radius: 3px;
+    font-size: 1.25rem;
+    // padding: 10px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .untucked {
+    max-height: 500px;
+    transition: all 1s ease-out;
+    overflow-y: hidden;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .tuckedUp {
+    max-height: 0px;
+    overflow-y: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   #expander {
@@ -65,55 +83,79 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: bisque;
-
     font-size: 2rem;
+    border: 1px solid black;
+    // pointer-events: none;
   }
   .greet-two {
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    > button {
-      background-color: brown;
+    > a > button {
+      background-color: var(--color-btn);
       height: 100px;
       width: 400px;
       font-size: 1.5rem;
       font-family: var(--fun-font);
+      border-radius: 10px;
+      color: var(--color-ln);
+      text-shadow: 1px 1px white;
+      border: 3px solid var(--color-ln);
     }
   }
 }
+
+.iframer {
+  background-color: var(--color-btn);
+  border: 3px solid var(--color-ln);
+  border-radius: var(--border-rad);
+}
+
 .padded {
   padding-top: 25vh;
   padding-left: calc(2.5vw + 5px + var(--vw-padding));
   padding-right: calc(2.5vw + 5px + var(--vw-padding));
-  background-color: rgb(124, 124, 192);
+  // background-color: rgb(124, 124, 192);
+}
+
+.about-text {
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: var(--color-btn);
 }
 .about-us {
   padding-top: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% auto;
+  margin-top: 1rem;
   padding-bottom: 2rem;
 }
 
 .picture-us {
   display: inline-block;
+  margin-top: 1rem;
   height: 200px;
+
   min-width: 200px;
   border: 1px solid black;
-  background: url("../images/coffee.jpeg");
+  background: url("../images/us.jpeg");
   background-size: contain;
+  // background-color: var(--color-btn);
 }
 .story-time {
   display: inline;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  // background-color: var(--color-btn);
 }
 .local-reviews {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
 
   width: 100%;
+  // background-color: aqua;
 }
 
 .google-reviews-filled-in {
@@ -122,30 +164,61 @@
   display: grid;
   // flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   flex: 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 20px;
-  width: 60vw;
-  min-height: 200px;
+  // width: 60vw;
+  // min-height: 200px;
 
   padding: 10px;
   // background-color: aqua;
-  border: 5px solid black;
+  // border: 5px solid black;
 }
 
 .quote-box {
   position: relative;
   background-color: rgba(250, 255, 224, 0.092);
   border: 3px solid black;
-
+  aspect-ratio: 1/1;
+  max-width: 15vw;
   padding: 2rem 1rem;
+  font-size: 1.25rem;
+  background-color: var(--color-btn);
+  border: 3px solid var(--color-ln);
+  border-radius: var(--border-rad);
+  font-family: var(--handwriting);
 }
 .author {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--color-ac);
 }
 
+#qpic1 {
+  background: url("../images/m1.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+#qpic2 {
+  background: url("../images/m2.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+#qpic3 {
+  background: url("../images/m3.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+#more-reviews {
+  // opacity: 50%;
+  width: 50%;
+  margin-left: auto;
+}
 // <div id="google-reviews-filled-in">
 // <div class="quote-box">
 //   <div class="quote">
@@ -153,3 +226,51 @@
 //     gracious service.
 //   </div>
 //   <div class="author">
+
+.links {
+  // border: 1px solid black;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  grid: 10px;
+  padding: 1rem;
+  // background-color: aquamarine;
+}
+
+.linkbox {
+  width: 20vh;
+  height: 20vh;
+  background-color: darkblue;
+  border: 8px solid black;
+  border-radius: 25px;
+}
+
+#toast {
+  background: url("../images/toast-flip.png");
+  background-size: cover;
+  // filter: invert(1);
+}
+
+#instagram {
+  background: url("../images/instagram.png");
+  background-size: cover;
+  // filter: invert(1);
+}
+
+#google {
+  background: url("../images/google.png");
+  background-size: cover;
+  // filter: invert(1);
+}
+
+.boiler-plate-footer {
+  // position: absolute;
+  // bottom: 10px;
+  width: auto;
+  // background-color: coral;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
