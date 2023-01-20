@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild app.jsx --bundle --outfile=out.js"
+    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --loader:.html=text"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,14 @@
     "gulp-less": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "intersection-observer": "^0.12.2"
-  }
+  },
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "./dist/index.css"
+    }
+  ],
+  "editor.minimap.enabled": true,
+  "liveSassCompile.settings.generateMap": false
 }
