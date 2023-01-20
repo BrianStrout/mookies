@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --loader:.html=text"
+    "build": "esbuild ./main.js --bundle --outfile=./index.js --loader:.html=text"
   },
   "repository": {
     "type": "git",

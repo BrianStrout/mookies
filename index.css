@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=EB+Garamond&family=Indie+Flower&display=swap");
+:root {
+  --vw-padding: 10vw;
+  --fun-font: "Arvo", serif;
+  --classic-font: "EB Garamond", serif;
+  --border-rad: 10px;
+  --handwriting: "Indie Flower", cursive;
+  --color-bg: #dcc9b6;
+  --color-tx: #a39171;
+  --color-ln: #6d4c3d;
+  --color-ac: #727d71;
+  --color-btn: #e4dad1;
+}
+
+.nav {
+  background-color: var(--color-bg);
+  border-bottom: 5px solid var(--color-ln);
+}
+
+.header {
+  width: 100vw;
+  padding: 2.5vw 2.5vw 0vw 2.5vw;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.subtitle {
+  display: flex;
+  flex-basis: 100%;
+  margin-left: calc(52.5vw + 25px);
+  background-color: var(--color-bg);
+  font-family: var(--classic-font);
+  font-size: 2rem;
+}
+
+.letter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--vw-padding);
+  height: var(--vw-padding);
+  border: 0.8vw solid black;
+  font-size: 8vw;
+  font-family: var(--fun-font);
+}
+
+.stucco {
+  position: fixed;
+  left: calc(2.5vw + 5px + var(--vw-padding));
+  /* color: pink; */
+  background: url("../images/mookiedoggo.png");
+  background-size: contain;
+  border: 0px solid black;
+}
+.stucco .guide {
+  display: inline-block;
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  bottom: -30px;
+}
+
+.link-box {
+  position: fixed;
+  right: calc(2.5vw + 5px);
+  color: pink;
+  border-radius: 50%;
+}
+.link-box .coffee-cup {
+  width: 100%;
+  height: 100%;
+  background: url("../images/trans-mookieslogo.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.drop-down {
+  position: absolute;
+  top: 100px;
+  font-size: 1rem;
+}
+
+.greeter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 1.5vw;
+  padding-left: 5vw;
+}
+.greeter .greet-one {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-btn);
+  border: 3px solid var(--color-ln);
+  border-radius: var(--border-rad);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.greeter .greet-one .open-status {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: var(--handwriting);
+}
+.greeter .open-status > pre {
+  font-family: var(--handwriting);
+  pointer-events: none;
+}
+.greeter #daysAndHours {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  background-color: var(--color-ac);
+  list-style: none;
+  border-radius: 3px;
+  font-size: 1.25rem;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.greeter .untucked {
+  max-height: 500px;
+  transition: all 1s ease-out;
+  overflow-y: hidden;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.greeter .tuckedUp {
+  max-height: 0px;
+  overflow-y: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.greeter #expander {
+  position: absolute;
+  z-index: 5;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px solid black;
+}
+.greeter .greet-two {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+.greeter .greet-two > a > button {
+  background-color: var(--color-btn);
+  height: 100px;
+  width: 400px;
+  font-size: 1.5rem;
+  font-family: var(--fun-font);
+  border-radius: 10px;
+  color: var(--color-ln);
+  text-shadow: 1px 1px white;
+  border: 3px solid var(--color-ln);
+}
+
+.iframer {
+  background-color: var(--color-btn);
+  border: 3px solid var(--color-ln);
+  border-radius: var(--border-rad);
+}
+
+.padded {
+  padding-top: 25vh;
+  padding-left: calc(2.5vw + 5px + var(--vw-padding));
+  padding-right: calc(2.5vw + 5px + var(--vw-padding));
+}
+
+.about-text {
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: var(--color-btn);
+}
+
+.about-us {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 30% auto;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.picture-us {
+  display: inline-block;
+  margin-top: 1rem;
+  height: 200px;
+  min-width: 200px;
+  border: 1px solid black;
+  background: url("../images/us.jpeg");
+  background-size: contain;
+}
+
+.story-time {
+  display: inline;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+}
+
+.local-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.google-reviews-filled-in {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex: 0;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 10px;
+}
+
+.quote-box {
+  position: relative;
+  background-color: rgba(250, 255, 224, 0.092);
+  border: 3px solid black;
+  aspect-ratio: 1/1;
+  max-width: 15vw;
+  padding: 2rem 1rem;
+  font-size: 1.25rem;
+  background-color: var(--color-btn);
+  border: 3px solid var(--color-ln);
+  border-radius: var(--border-rad);
+  font-family: var(--handwriting);
+}
+
+.author {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--color-ac);
+}
+
+#qpic1 {
+  background: url("../images/m1.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+#qpic2 {
+  background: url("../images/m2.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+#qpic3 {
+  background: url("../images/m3.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+#more-reviews {
+  width: 50%;
+  margin-left: auto;
+}
+
+.links {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.linkbox {
+  width: 20vh;
+  height: 20vh;
+  background-color: darkblue;
+  border: 8px solid black;
+  border-radius: 25px;
+}
+
+#toast {
+  background: url("../images/toast-flip.png");
+  background-size: cover;
+}
+
+#instagram {
+  background: url("../images/instagram.png");
+  background-size: cover;
+}
+
+#google {
+  background: url("../images/google.png");
+  background-size: cover;
+}
+
+.boiler-plate-footer {
+  width: auto;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .subtitle {
+    font-size: 18px;
+  }
+  #guide-text {
+    left: 0;
+    width: 180px;
+  }
+  .padded {
+    padding-top: 80px;
+  }
+  .about-us {
+    margin-top: 0;
+    padding-top: 0;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+  .about-text {
+    padding: 5px;
+  }
+  .picture-us {
+    min-width: 140px;
+    height: 140px;
+    width: 140px;
+  }
+  .story-time {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .qpic {
+    display: none;
+  }
+  .google-reviews-filled-in {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0;
+    gap: 2px;
+  }
+  .google-reviews-filled-in > h1 {
+    font-size: 1rem;
+  }
+  .quote-box {
+    max-width: 100%;
+    padding: 10px 0px 0px 0px;
+    font-size: 1rem;
+    aspect-ratio: 3/1;
+  }
+  .author {
+    font-size: 1rem;
+    bottom: 0;
+  }
+  #more-reviews {
+    transform: translateY(-100%);
+    width: 100px;
+    height: 25px;
+  }
+  .links {
+    gap: 20px;
+  }
+  .linkbox {
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    border: 8px solid black;
+    border-radius: 25px;
+  }
+  .boiler-plate-footer {
+    text-align: center;
+  }
+}
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.site-shell {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  background-color: var(--color-bg);
+}
+
+.view-chapter {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.chapter3 {
+  position: relative;
+} /*# sourceMappingURL=index.css.map */
