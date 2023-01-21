@@ -98,7 +98,7 @@
   }
   .about-text {
     grid-template-columns: 100%;
-    grid-template-rows: 80vw auto;
+    grid-template-rows: 250px auto;
 
     padding: 1rem 1rem;
     margin: 0;
@@ -109,7 +109,7 @@
   .picture-us {
     margin-top: 0;
     width: 100%;
-    height: 75vw;
+    height: 250px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-position: top center;
@@ -121,6 +121,7 @@
 
   .story-time {
     padding: 0;
+    margin-top: 1rem;
   }
 
   #signed {
@@ -143,5 +144,12 @@
   }
   .boiler-plate-footer {
     text-align: center;
+  }
+
+  #qpic1 {
+    background-position: left;
+  }
+  #qpic3 {
+    background-position: right;
   }
 }
