@@ -147,40 +147,31 @@
   border: 1px solid black;
   background: url("../images/us.jpeg");
   background-size: contain;
-  // background-color: var(--color-btn);
 }
 .story-time {
   display: inline;
   padding: 1rem 2rem;
   font-size: 1.25rem;
-  // background-color: var(--color-btn);
 }
 .local-reviews {
   position: relative;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
 
   width: 100%;
 }
 
 .google-reviews-filled-in {
-  // height: 100vh;
   position: relative;
   display: grid;
-  // flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   flex: 0;
   justify-content: space-around;
   gap: 20px;
-  // width: 60vw;
-  // min-height: 200px;
-
   padding: 10px;
-  // background-color: aqua;
-  // border: 5px solid black;
+  margin-top: 20px;
 }
 
 .quote-box {
@@ -208,52 +199,43 @@
   background: url("../images/m1.jpeg");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 #qpic2 {
   background: url("../images/m2.jpeg");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 #qpic3 {
   background: url("../images/m3.jpeg");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .chapter2 {
   position: relative;
 }
 #more-reviews {
-  // opacity: 50%;
   position: absolute;
   bottom: 5vh;
   right: 5vh;
-  // width: 50%;
   margin-left: auto;
   padding: 5px 10px;
+  font-family: var(--classic-font);
 }
-// <div id="google-reviews-filled-in">
-// <div class="quote-box">
-//   <div class="quote">
-//     Lovely afternoon coffee and apple crumble. Delicious. And super
-//     gracious service.
-//   </div>
-//   <div class="author">
 
 .links {
-  // border: 1px solid black;
   margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
-  // grid: 10px;
   padding: 1rem;
-  // background-color: aquamarine;
 }
 
 .linkbox {
   width: 20vh;
   height: 20vh;
-  // background-color: darkblue;
   border: 8px solid black;
   border-radius: 25px;
 }
@@ -261,26 +243,20 @@
 #toast {
   background: url("../images/toast-flip.png");
   background-size: cover;
-  // filter: invert(1);
 }
 
 #instagram {
   background: url("../images/instagram.png");
   background-size: cover;
-  // filter: invert(1);
 }
 
 #google {
   background: url("../images/google.png");
   background-size: cover;
-  // filter: invert(1);
 }
 
 .boiler-plate-footer {
-  // position: absolute;
-  // bottom: 10px;
   width: auto;
-  // background-color: coral;
   padding: 10px 0px;
   display: flex;
   justify-content: center;
