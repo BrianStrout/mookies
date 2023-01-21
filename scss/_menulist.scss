@@ -1,6 +1,7 @@
 @use "root";
 
 .greet-menu {
+  position: relative;
   width: 400px;
   height: 400px;
   background-color: var(--color-btn);
@@ -8,10 +9,21 @@
   border-radius: 15px;
   overflow: scroll;
 }
+.menu-hello {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
+  margin-top: 20%;
+  font-size: 1rem;
+  font-family: var(--fun-font);
+}
 .sm-menu-tabs {
+  position: sticky;
+  top: 0;
   height: 100px;
   width: 100%;
+  background-color: var(--color-btn);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   font-family: var(--classic-font);
@@ -22,6 +34,10 @@
     align-items: center;
     border: 1.5px solid black;
     border-bottom: 3px solid black;
+    > h5 {
+      font-size: 16px;
+      pointer-events: none;
+    }
   }
   > :nth-child(1) {
     border-left: 0px;
@@ -44,7 +60,7 @@
     margin-bottom: 15px;
   }
   > li {
-    margin: 1px;
+    margin-top: 10px;
     margin-left: 10px;
     display: grid;
     grid-template-columns: 55% 45%;

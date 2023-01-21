@@ -80,16 +80,47 @@
   top: 100px;
   font-size: 1rem;
 }
-
 .greeter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 100px;
   padding-top: 1.5vw;
   padding-left: 5vw;
 }
+.greet-menu {
+  width: 400px;
+  height: 400px;
+  background-color: #727d71;
+  border: 3px solid black;
+}
+
+.sm-menu-tabs {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.sm-menu-tab {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+#menu-tab-hotdrink {
+  background-color: cadetblue;
+}
+
+.sm-menu-disp {
+  background-color: darksalmon;
+}
+.greet-const {
+  border: 4px solid black;
+}
+
 .greeter .greet-one {
   position: relative;
   width: 400px;

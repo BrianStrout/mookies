@@ -7,13 +7,19 @@
   justify-content: center;
   gap: 100px;
 
-  padding-top: 1.5vw;
+  padding-top: 1vw;
   padding-left: 5vw;
+  .greet-const {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
   .greet-one {
     position: relative;
     width: 400px;
     height: 100px;
-    // border: 1px solid black;
+    border: 1px solid pink;
 
     display: flex;
     flex-direction: column;
@@ -97,10 +103,13 @@
   }
 }
 
-.iframer {
+.iframer-cont {
   background-color: var(--color-btn);
   border: 3px solid var(--color-ln);
   border-radius: var(--border-rad);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .padded {
@@ -115,11 +124,13 @@
   border-radius: 25px;
   padding: 15px;
   background-color: var(--color-btn);
+
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
 .about-us {
   padding-top: 1rem;
-  display: grid;
-  grid-template-columns: 30% auto;
+  display: flex;
   margin-top: 1rem;
   padding-bottom: 2rem;
 }
@@ -142,13 +153,13 @@
   // background-color: var(--color-btn);
 }
 .local-reviews {
+  position: relative;
   display: flex;
   flex-direction: column;
   // justify-content: center;
   align-items: center;
 
   width: 100%;
-  // background-color: aqua;
 }
 
 .google-reviews-filled-in {
@@ -174,7 +185,7 @@
   background-color: rgba(250, 255, 224, 0.092);
   border: 3px solid black;
   aspect-ratio: 1/1;
-  max-width: 15vw;
+  max-width: 18vw;
   padding: 2rem 1rem;
   font-size: 1.25rem;
   background-color: var(--color-btn);
@@ -206,11 +217,17 @@
   background-size: contain;
   background-position: center;
 }
-
+.chapter2 {
+  position: relative;
+}
 #more-reviews {
   // opacity: 50%;
-  width: 50%;
+  position: absolute;
+  bottom: 5vh;
+  right: 5vh;
+  // width: 50%;
   margin-left: auto;
+  padding: 5px 10px;
 }
 // <div id="google-reviews-filled-in">
 // <div class="quote-box">
@@ -233,7 +250,7 @@
 .linkbox {
   width: 20vh;
   height: 20vh;
-  background-color: darkblue;
+  // background-color: darkblue;
   border: 8px solid black;
   border-radius: 25px;
 }
