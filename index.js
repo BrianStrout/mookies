@@ -1,10 +1,10 @@
 (() => {
   // modules/int_obs_pageChange.js
   var page_Options = {
-    threshold: 0.6
+    threshold: 0.8
   };
   var guideText = document.getElementById("guide-text");
-  var detectPage1 = new IntersectionObserver(function(entries, detectPage22) {
+  var detectPage1 = new IntersectionObserver(function(entries, detectPage12) {
     entries.forEach((page) => {
       if (!page.isIntersecting) {
         return;
@@ -22,7 +22,7 @@
       }
     });
   }, page_Options);
-  var detectPage3 = new IntersectionObserver(function(entries, detectPage22) {
+  var detectPage3 = new IntersectionObserver(function(entries, detectPage32) {
     entries.forEach((page) => {
       if (!page.isIntersecting) {
         return;
@@ -31,7 +31,7 @@
       }
     });
   }, page_Options);
-  var detectPage4 = new IntersectionObserver(function(entries, detectPage22) {
+  var detectPage4 = new IntersectionObserver(function(entries, detectPage42) {
     entries.forEach((page) => {
       if (!page.isIntersecting) {
         return;

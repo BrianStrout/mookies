@@ -1,10 +1,10 @@
 const page_Options = {
-  threshold: 0.6,
+  threshold: 0.7,
 };
 
 const guideText = document.getElementById("guide-text");
 
-const detectPage1 = new IntersectionObserver(function (entries, detectPage2) {
+const detectPage1 = new IntersectionObserver(function (entries, detectPage1) {
   entries.forEach((page) => {
     if (!page.isIntersecting) {
       return;
@@ -24,7 +24,7 @@ const detectPage2 = new IntersectionObserver(function (entries, detectPage2) {
   });
 }, page_Options);
 
-const detectPage3 = new IntersectionObserver(function (entries, detectPage2) {
+const detectPage3 = new IntersectionObserver(function (entries, detectPage3) {
   entries.forEach((page) => {
     if (!page.isIntersecting) {
       return;
@@ -34,7 +34,7 @@ const detectPage3 = new IntersectionObserver(function (entries, detectPage2) {
   });
 }, page_Options);
 
-const detectPage4 = new IntersectionObserver(function (entries, detectPage2) {
+const detectPage4 = new IntersectionObserver(function (entries, detectPage4) {
   entries.forEach((page) => {
     if (!page.isIntersecting) {
       return;
