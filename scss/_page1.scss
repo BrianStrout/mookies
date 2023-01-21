@@ -194,6 +194,10 @@
   font-size: 1.5rem;
   color: var(--color-ac);
 }
+#signed {
+  font-family: var(--handwriting);
+  float: right;
+}
 
 #qpic1 {
   background: url("../images/m1.jpeg");
