@@ -217,7 +217,7 @@
   height: 200px;
   min-width: 200px;
   border: 1px solid black;
-  background: url("../images/us.jpeg");
+  background: url("../images/ustrans.png");
   background-size: contain;
 }
 
@@ -431,33 +431,32 @@
   }
   .about-us {
     max-width: calc(100vw - 48px);
+    padding-top: 0;
+    margin-top: 0;
   }
   .about-text {
     grid-template-columns: 100%;
-    grid-template-rows: 250px auto;
-    padding: 1rem 1rem;
+    grid-template-rows: 150px auto;
+    padding: 0px 1rem;
     margin: 0;
     height: 100%;
   }
   .picture-us {
     margin-top: 0;
-    width: 100%;
-    height: 250px;
+    width: 80%;
+    margin-left: 10%;
+    height: 150px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 100%;
+    background-size: cover;
     border: 0px;
     border-bottom: 3px solid black;
     border-radius: 15px 15px 0px 0px;
   }
   .story-time {
     padding: 0;
-    margin-top: 1rem;
-  }
-  #signed {
-    font-family: var(--handwriting);
-    float: right;
+    margin-top: 0.25rem;
   }
   .chapter4 {
     gap: 20px;
