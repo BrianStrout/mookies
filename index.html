@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mookie's!</title>
-    <link rel="stylesheet" href="./scss/index.css" />
+    <link rel="stylesheet" href="./index.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="site-shell">
-      <div class="screen"></div>
+      <div id="screen" class="screen">
+        <div class="intro-box-border">
+          <div class="intro-box">
+            <div class="hi1 hiThere"></div>
+            <div class="hi2 hiThere"></div>
+            <div class="hiThere"></div>
+            <div class="hi3 hiThere"></div>
+          </div>
+        </div>
+      </div>
       <div class="view-chapter chapter1">
         <div id="nav" class="nav">
           <div class="header">
@@ -32,8 +41,9 @@
           <div class="subtitle">at Mugford Cafe</div>
         </div>
 
-        <div class="greeter">
-          <div class="greet-menu">
+        <div class="hero">
+          <div class="greeter">
+            <!-- <div class="greet-menu">
             <div class="sm-menu-tabs">
               <div class="sm-menu-tab" id="menu-tab-hotdrink">
                 <h5>Hot Drinks!</h5>
@@ -53,42 +63,57 @@
                 Come on in & check out our daily specials!
               </div>
             </div>
-          </div>
-          <div class="greet-const">
-            <div class="greet-one">
-              <div class="open-status">
-                <pre> We are <span id="openOrClosed"> mixed</span></pre>
-                <div id="expander">+</div>
+          </div> -->
+            <div class="greet-const">
+              <div class="greet-hours">
+                <div class="open-status">
+                  <pre> We are <span id="openOrClosed"> mixed</span></pre>
+                  <div id="expander">+</div>
+                </div>
+                <ul id="daysAndHours" class="untucked tuckedUp">
+                  <li>Friday 7 AM–2 PM</li>
+                  <li>Saturday 7 AM–2 PM</li>
+                  <li>Sunday 7 AM–12 PM</li>
+                  <li>Monday Closed</li>
+                  <li>Tuesday 7 AM–2 PM</li>
+                  <li>Wednesday 7 AM–2 PM</li>
+                  <li>Thursday 7 AM–2 PM</li>
+                  <li></li>
+                </ul>
               </div>
-              <ul id="daysAndHours" class="untucked tuckedUp">
-                <li>Friday 7 AM–2 PM</li>
-                <li>Saturday 7 AM–2 PM</li>
-                <li>Sunday 7 AM–12 PM</li>
-                <li>Monday Closed</li>
-                <li>Tuesday 7 AM–2 PM</li>
-                <li>Wednesday 7 AM–2 PM</li>
-                <li>Thursday 7 AM–2 PM</li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="greet-two">
-              <a
-                href="https://www.toasttab.com/mookies-at-mugford-114-washington-street/v3"
-              >
-                <button>
-                  <span id="toastSwitchMobile">View Menu & Order Online</span
-                  ><span id="toastSwitchDesk">Order Online w/ ToastTab</span>
-                </button></a
-              >
-            </div>
-            <div class="greet-two">
-              <a href="tel:123-456-7890"> <button>Call Ahead</button></a>
-            </div>
-            <div class="greet-two">
-              <a href="#findus"> <button>Find Us</button></a>
+              <div class="greet-tab unintroduced-tableft">
+                <a
+                  href="https://www.toasttab.com/mookies-at-mugford-114-washington-street/v3"
+                >
+                  <button>
+                    <span id="toastSwitchMobile"> View Menu & Order Online</span
+                    ><span id="toastSwitchDesk">
+                      <h2>Order Online</h2>
+                      <p>w/ ToastTab</p>
+                    </span>
+                  </button></a
+                >
+              </div>
+              <div class="greet-tab unintroduced-tabdown">
+                <a href="#findus">
+                  <button>
+                    <h2>Contact</h2>
+                    <p>& location</p>
+                  </button></a
+                >
+              </div>
+              <div class="greet-tab unintroduced-tabright">
+                <a href="#findus">
+                  <button>
+                    <h2>Get Social</h2>
+                    <p>on Instagram</p>
+                  </button></a
+                >
+              </div>
             </div>
           </div>
         </div>
+        <div class="arrow-down">arrow down</div>
       </div>
       <div class="view-chapter padded chapter2">
         <div class="local-reviews">
@@ -186,5 +211,5 @@
       </div>
     </div>
   </body>
-  <script src="./index.js" type="module"></script>
+  <script src="./main.js" type="module"></script>
 </html>

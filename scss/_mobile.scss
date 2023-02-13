@@ -81,6 +81,8 @@
   .qpic {
     border: 0;
     background-repeat: no-repeat;
+    background-size: 33%;
+    // width: 33%;
   }
   .author {
     font-size: 1rem;
@@ -91,7 +93,7 @@
     width: 120px;
     height: 35px;
     bottom: 10vh;
-    right: calc(50vw - 60px);
+    right: calc(70vw - 60px);
   }
   .about-us {
     max-width: calc(100vw - 48px);
@@ -101,7 +103,7 @@
   .about-text {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0px 1rem;
+    padding: 10px 1rem;
     margin: 0;
     height: 100%;
   }
@@ -143,8 +145,14 @@
 
   #qpic1 {
     background-position: left;
+
+    background-size: 33%;
+  }
+  #qpic2 {
+    background-size: 33%;
   }
   #qpic3 {
     background-position: right;
+    background-size: 33%;
   }
 }

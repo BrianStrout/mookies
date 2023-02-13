@@ -13,8 +13,29 @@ import {
   menuTabSandwiches,
   smMenuDisp,
 } from "./modules/menu-tab-changer.js";
+import { test } from "./modules/timeoutmod.js";
+import { Animator } from "./modules/animator.js";
+import { screenWatcher } from "./modules/observescreen.js";
+test(12, 12);
+const screens = document.querySelectorAll(".screen");
+
+setTimeout(() => {
+  Animator("class", "hiThere", "add", "pop-in", "none", 500);
+}, 1000);
+setTimeout(() => {
+  Animator("id", "screen", "add", "drop-off", "none", 750);
+}, 5000);
+
+setTimeout(() => {
+  Animator("class", "letter-box", "add", "tumble", "none", 0);
+}, 2000);
+
+screens.forEach((image) => {
+  screenWatcher.observe(image);
+});
 
 menuTabHotdrink.addEventListener("click", () => {
+  console.log("h");
   updateMenuDisplay("hot-drink");
 });
 

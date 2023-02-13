@@ -1,24 +1,129 @@
 @use "root";
+.chapter2 {
+  position: relative;
+}
+.screen {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.drop-off {
+    transform-origin: top left;
+    animation: dropoffanim 0.4s ease-in 0s 1 forwards;
+  }
+}
+@keyframes dropoffanim {
+  0% {
+    scale: 100%;
+    transform: translateY(0);
+    rotate: (0deg);
+  }
+  // }
+  // 10% {
+  //   scale: 100%;
+  //   transform: translateY(0);
+  //   rotate: (20deg);
+  // }
+  // 25% {
+  //   scale: 100%;
+  //   transform: translateY(0);
+  //   rotate: (10deg);
+  // }
+  // 40% {
+  //   scale: 100%;
+  //   transform: translateY(0);
+  //   rotate: (20deg);
+  // }
+  99% {
+    scale: 100%;
+    transform: translateY(150vh);
+  }
+  100% {
+    scale: 0%;
+  }
+}
+
+.intro-box-border {
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.intro-box {
+  margin: 30px;
+  position: relative;
+  // border: 3px solid brown;
+  // padding: 50px;
+  width: 280px;
+  height: 280px;
+}
+
+.hiThere {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  scale: 0%;
+  background-position: center;
+  background-size: cover;
+
+  &:nth-child(1) {
+    background-image: url("../images/hithere/hithere0.png");
+  }
+  &:nth-child(2) {
+    background-image: url("../images/hithere/hithere1.png");
+  }
+  &:nth-child(3) {
+    background-image: url("../images/hithere/hithere2.png");
+  }
+  &:nth-child(4) {
+    background-image: url("../images/hithere/hithere3.png");
+  }
+}
+
+.pop-in {
+  scale: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: max(30vh, 500px);
+  background-image: url("../images/f\ chet.JPG");
+  background-position: center;
+  background-size: cover;
+}
 
 .greeter {
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 100px;
-
   padding-top: 1vw;
   padding-left: 5vw;
+  // background-color: aquamarine;
   .greet-const {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
   }
-  .greet-one {
-    position: relative;
-    width: 400px;
-    height: 100px;
+
+  .greet-hours {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 50px;
     border: 1px solid pink;
 
     display: flex;
@@ -86,19 +191,45 @@
     border: 1px solid black;
     // pointer-events: none;
   }
-  .greet-two {
+  .greet-tab {
     padding-left: 2.5vw;
     padding-right: 2.5vw;
+    transform: translate(0, 0);
+    transition: all 0.5s ease-out;
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.25s;
+      }
+    }
+
     > a > button {
       background-color: var(--color-btn);
-      height: 100px;
-      width: 400px;
+      height: 200px;
+      width: 200px;
       font-size: 1.5rem;
       font-family: var(--fun-font);
       border-radius: 10px;
       color: var(--color-ln);
       text-shadow: 1px 1px white;
       border: 3px solid var(--color-ln);
+      border-radius: 50%;
+      h2 {
+        // opacity: 0.5;
+      }
+      p {
+        color: black;
+        color: var(--color-ln);
+      }
+    }
+
+    &.unintroduced-tableft {
+      transform: translateX(-100vw);
+    }
+    &.unintroduced-tabdown {
+      transform: translateY(100vw);
+    }
+    &.unintroduced-tabright {
+      transform: translateX(100vw);
     }
   }
 }
@@ -134,7 +265,7 @@
 .about-us {
   padding-top: 1rem;
   display: flex;
-  margin-top: 1rem;
+  margin-top: 8rem;
   padding-bottom: 2rem;
 }
 
