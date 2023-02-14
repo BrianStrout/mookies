@@ -34,20 +34,20 @@ screens.forEach((image) => {
   screenWatcher.observe(image);
 });
 
-menuTabHotdrink.addEventListener("click", () => {
-  console.log("h");
-  updateMenuDisplay("hot-drink");
-});
+// menuTabHotdrink.addEventListener("click", () => {
+//   console.log("h");
+//   updateMenuDisplay("hot-drink");
+// });
 
-menuTabColddrink.addEventListener("click", () => {
-  updateMenuDisplay("cold-drink");
-});
-menuTabPastries.addEventListener("click", () => {
-  updateMenuDisplay("pastries");
-});
-menuTabSandwiches.addEventListener("click", () => {
-  updateMenuDisplay("sandwiches");
-});
+// menuTabColddrink.addEventListener("click", () => {
+//   updateMenuDisplay("cold-drink");
+// });
+// menuTabPastries.addEventListener("click", () => {
+//   updateMenuDisplay("pastries");
+// });
+// menuTabSandwiches.addEventListener("click", () => {
+//   updateMenuDisplay("sandwiches");
+// });
 
 let checkHours = determineDayHours();
 console.log(checkHours.shopOpen, checkHours.closeAt);

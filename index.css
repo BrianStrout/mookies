@@ -6,6 +6,7 @@
   --border-rad: 10px;
   --handwriting: "Indie Flower", cursive;
   --color-bg: #dcc9b6;
+  --color-bg-t: #dcc9b67e;
   --color-tx: #a39171;
   --color-ln: #6d4c3d;
   --color-ac: #727d71;
@@ -155,10 +156,13 @@
 }
 .stucco .guide {
   display: inline-block;
+  width: 150px;
   font-size: 16px;
   color: black;
   position: absolute;
   bottom: -35px;
+  display: flex;
+  justify-content: center;
 }
 
 .link-box {
@@ -407,30 +411,97 @@
   padding-right: calc(2.5vw + 5px + var(--vw-padding));
 }
 
-.about-text {
-  border: 3px solid black;
-  border-radius: 25px;
-  padding: 15px;
-  background-color: var(--color-btn);
-  display: grid;
-  grid-template-columns: 20% 80%;
+.locals-dig-us-hero {
+  position: relative;
+  width: 100%;
+  height: max(30vh, 500px);
+  background-image: url("../images/f rach.JPG");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+}
+
+.quote-frame {
+  position: relative;
+  border: 2px solid var(--color-ln);
+  width: 45%;
+  height: 200px;
+  background-color: var(--color-bg-t);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.quote {
+  position: absolute;
+  font-size: 1.5rem;
+  transform: translateY(200px);
+  margin: 1rem;
+}
+
+.quote-up {
+  transform: translateY(0);
+}
+
+.chapter3 {
+  position: relative;
+  padding-top: 25vh;
+}
+
+.about-us-hero-1 {
+  position: relative;
+  width: 100%;
+  height: max(30vh, 500px);
+  background-image: url("../images/espresso.JPG");
+  background-position: center;
+  background-size: cover;
+  padding-right: 5%;
 }
 
 .about-us {
-  padding-top: 1rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   display: flex;
-  margin-top: 8rem;
-  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  border: 3px solid black;
+  width: 80%;
+  height: 350px;
+  padding: 15px;
+  background-color: var(--color-btn);
 }
 
 .picture-us {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: inline-block;
   margin-top: 1rem;
   height: 200px;
   min-width: 200px;
-  border: 1px solid black;
   background: url("../images/ustrans.png");
   background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#signed {
+  font-family: var(--handwriting);
+  float: right;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: var(--color-bg);
+  text-align: end;
 }
 
 .story-time {
@@ -479,11 +550,6 @@
   right: 20px;
   font-size: 1.5rem;
   color: var(--color-ac);
-}
-
-#signed {
-  font-family: var(--handwriting);
-  float: right;
 }
 
 #qpic1 {
