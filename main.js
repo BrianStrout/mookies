@@ -20,7 +20,7 @@ test(12, 12);
 const screens = document.querySelectorAll(".screen");
 
 setTimeout(() => {
-  Animator("class", "hiThere", "add", "pop-in", "none", 500);
+  Animator("class", "hiThere", "add", "pop-in", "none", 125);
 }, 1000);
 setTimeout(() => {
   Animator("id", "screen", "add", "drop-off", "none", 750);
