@@ -61,6 +61,33 @@
                 </ul>
               </div>
               <div class="greet-tab unintroduced-tableft">
+                <svg
+                  xmlns="//www.w3.org/2000/svg"
+                  version="1.1"
+                  class="svg-filters"
+                  style="display: none"
+                >
+                  <defs>
+                    <filter id="marker-shape">
+                      <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0 0.15"
+                        numOctaves="1"
+                        result="warp"
+                      />
+                      <feDisplacementMap
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        scale="30"
+                        in="SourceGraphic"
+                        in2="warp"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div class="tag-line-box tag-menu">
+                  <span class="tag-line">Our Menu</span>
+                </div>
                 <a
                   href="https://www.toasttab.com/mookies-at-mugford-114-washington-street/v3"
                 >
@@ -82,6 +109,9 @@
                 >
               </div>
               <div class="greet-tab unintroduced-tabright">
+                <div class="tag-line-box tag-social">
+                  <span class="tag-line">#coffeetime</span>
+                </div>
                 <a href="#findus">
                   <button>
                     <h2>Get Social</h2>
@@ -92,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="arrow-down">arrow down</div>
+        <div class="arrow-down">↓Get To Know Us</div>
       </div>
       <div class="view-chapter padded chapter2">
         <div class="locals-dig-us-hero">
@@ -122,21 +152,25 @@
           <div class="about-us">
             <div class="about-text">
               <p class="story-time">
-                Mookie's is a casual neighborhood cafe located in old town,
-                Marblehead's Historic District. We serve freshly cooked
-                pastries, sandwiches, and beverages to put more pep in your
-                step. We also offer dairy alternatives, and online ordering for
-                when you on the fly. We have inhouse seating for those looking
-                to "paws" their busy lives.<br />
-                <br />
-
-                Also check out our sister shop Haley's Liqours if you need a
-                little something for later on.
+                Mookie's is a casual neighborhood cafe located in Marblehead
+                Mass's Historic District commonly called Old Town. We serve
+                freshly cooked pastries, sandwiches, and beverages to put more
+                pep in your step. We offer dairy alternatives, and online
+                ordering for when you are on the fly. We have inhouse seating at
+                tables and more comfy chairs in the back for those looking to
+                "paws" their busy lives.<br />
+                We share a space with our sister shop
+                <b><u>Haley's Liqours</u></b> if you need a little something for
+                later on. We carry a variety of local favorite beers as well as
+                the classics, over 100 wines, and a wide variety of liqour.
                 <br />
               </p>
+
+              <div class="picture-us">
+                <span id="signed"> -Tish & Sean </span>
+              </div>
             </div>
           </div>
-          <div class="picture-us"><span id="signed"> -Tish & Sean </span></div>
         </div>
         <!-- </div> -->
       </div>
@@ -170,10 +204,28 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div class="boiler-plate-footer">
-          Mookies Cafe at Mugford, 114 Washington St, Marblehead, MA 01945 *
-          (781) 990-3282 * email?
-        </div>
+
+        <footer>
+          <div class="feet">
+            <div class="mookiesfoot">
+              Mookies Cafe at Mugford, 114 Washington St, Marblehead, MA 01945 *
+              (781) 990-3282
+              <img
+                class="footer-icon"
+                src="./images/icon-email.png"
+                alt="email link"
+              />
+            </div>
+            <div class="stroutcofoot">
+              Site designed by <a href="https://www.Strout.co">Strout.Co</a>
+              <img
+                class="footer-icon"
+                src="images/stroutcocloud.png"
+                alt="email link"
+              />
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   </body>

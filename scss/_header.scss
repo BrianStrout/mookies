@@ -18,7 +18,10 @@
   gap: 5px;
 }
 .subtitle {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  display: inline-block;
   flex-basis: 100%;
   margin-left: calc(52.5vw + 25px);
   background-color: var(--color-bg);
