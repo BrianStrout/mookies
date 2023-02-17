@@ -569,20 +569,17 @@
   margin-top: 1rem;
   height: 200px;
   min-width: 200px;
-  background: url("../images/ustrans.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 #signed {
   font-family: var(--handwriting);
   float: right;
-  border: 1px solid black;
   margin: 10px;
-  background-color: var(--color-bg);
   text-align: end;
 }
 

@@ -16,8 +16,11 @@ import {
 import { test } from "./modules/timeoutmod.js";
 import { Animator } from "./modules/animator.js";
 import { screenWatcher } from "./modules/observescreen.js";
-test(12, 12);
+import { quoteUpdater } from "./modules/quoteUpdater.js";
+import { quoteWatcher } from "./modules/observeQuote.js";
+
 const screens = document.querySelectorAll(".screen");
+const quoteSection = document.querySelectorAll("#quoteUpdater");
 
 setTimeout(() => {
   Animator("class", "hiThere", "add", "pop-in", "none", 500);
@@ -29,6 +32,10 @@ setTimeout(() => {
 setTimeout(() => {
   Animator("class", "letter-box", "add", "tumble", "none", 0);
 }, 2000);
+
+quoteSection.forEach((section) => {
+  quoteWatcher.observe(section);
+});
 
 screens.forEach((image) => {
   screenWatcher.observe(image);

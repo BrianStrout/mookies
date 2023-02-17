@@ -1,6 +1,10 @@
+let currentPos = 0;
+
 const quoteUpdater = () => {
+  console.log("quoteupdate fired");
+
   const updateTarget = document.getElementById("quoteUpdater");
-  let currentPos = 0;
+
   const quotes = [
     "Avocado and goat cheese toast insanely good. Caramel macchiato delicious (not a low grade syrupy drink). Highly recommend.",
     "Awesome coffee and pastries! Our cashier was so friendly and fun.",
@@ -9,7 +13,7 @@ const quoteUpdater = () => {
 
   if (++currentPos >= quotes.length) currentPos = 0;
 
-  updateTarget.innerHTML = images[currentPos];
+  updateTarget.innerHTML = quotes[currentPos];
 };
 
 export { quoteUpdater };
