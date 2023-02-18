@@ -92,8 +92,8 @@
   position: relative;
   width: 100%;
   height: max(30vh, 500px);
-  background-image: url("../images/f\ chet.JPG");
-  background-position: center;
+  background-image: url("../images/chet-hero-edit.JPG");
+  background-position: center bottom;
   background-size: cover;
   opacity: 1;
   transition: all 0.3s cubic-bezier(0.44, 0.4, 0.19, 1.05) 0.1s;
@@ -284,6 +284,7 @@
   border: 3px solid var(--color-ln);
   border-radius: var(--border-rad);
   width: 80%;
+  height: 400px;
   margin-left: 10%;
   margin-right: 10%;
 }
