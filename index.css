@@ -16,6 +16,7 @@
 .nav {
   position: relative;
   height: calc(4vw + var(--vw-padding));
+  min-height: 75px;
   background-color: var(--color-bg);
   border-bottom: 5px solid var(--color-ln);
 }
@@ -49,6 +50,8 @@
   align-items: center;
   width: var(--vw-padding);
   height: var(--vw-padding);
+  min-width: 40px;
+  min-height: 40px;
   border: 0.5vw solid black;
   font-size: 4vw;
   font-family: var(--fun-font);
@@ -151,7 +154,7 @@
 }
 .stucco {
   position: fixed;
-  left: calc(2.5vw + 5px + var(--vw-padding));
+  left: max(2.5vw + 5px + var(--vw-padding), 53px);
   /* color: pink; */
   background: url("../images/mookiedoggo.png");
   background-size: contain;
@@ -286,7 +289,6 @@
   justify-content: center;
   gap: 100px;
   padding-top: 1vw;
-  padding-left: 5vw;
 }
 .greeter .greet-const {
   display: flex;
@@ -299,18 +301,15 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
+  width: 250px;
   height: 50px;
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--color-btn);
-  border: 3px solid var(--color-ln);
-  border-radius: var(--border-rad);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 30px;
 }
 .greeter .greet-hours .open-status {
   width: 100%;
@@ -708,148 +707,6 @@
   margin-top: auto;
 }
 
-@media only screen and (max-width: 500px) {
-  .site-shell {
-    background-color: var(--color-bg);
-    overflow: hidden;
-  }
-  .subtitle {
-    font-size: 18px;
-  }
-  #guide-text {
-    left: 0;
-    bottom: -20px;
-    width: 180px;
-    font-size: 1rem;
-  }
-  .greeter {
-    padding: 4px 0px;
-    flex-direction: column-reverse;
-    max-width: 100vw;
-    align-items: center;
-  }
-  .greet-one,
-  .greet-two,
-  .greet-two > a > button {
-    max-width: 98vw;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  #toastSwitchMobile {
-    display: inline;
-  }
-  #toastSwitchDesk {
-    display: none;
-  }
-  .greet-menu {
-    display: none;
-  }
-  .greet-const {
-    max-width: 98vw;
-    overflow-x: hidden;
-    padding-top: 1rem;
-  }
-  .padded {
-    padding: 85px 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .quote {
-    margin-left: 1rem;
-  }
-  .google-reviews-filled-in {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    gap: 20px;
-  }
-  .google-reviews-filled-in > h1 {
-    font-size: 1rem;
-  }
-  .quote-box {
-    max-width: 100%;
-    padding: 10px 0px 0px 0px;
-    height: 10vh;
-    width: 100%;
-    font-size: 1rem;
-  }
-  .qpic {
-    border: 0;
-    background-repeat: no-repeat;
-    background-size: 33%;
-  }
-  .author {
-    font-size: 1rem;
-    bottom: 0;
-  }
-  #more-reviews {
-    transform: translateY(-100%);
-    width: 120px;
-    height: 35px;
-    bottom: 10vh;
-    right: calc(70vw - 60px);
-  }
-  .about-us {
-    max-width: calc(100vw - 48px);
-    padding-top: 0;
-    margin-top: 0;
-  }
-  .about-text {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 10px 1rem;
-    margin: 0;
-    height: 100%;
-  }
-  .picture-us {
-    margin-top: 0;
-    width: 100%;
-    height: 180px;
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    border: 0px;
-    border-bottom: 3px solid black;
-    border-radius: 15px 15px 0px 0px;
-  }
-  .story-time {
-    padding: 0;
-    margin-top: 0.25rem;
-  }
-  .chapter4 {
-    gap: 20px;
-  }
-  .links {
-    gap: 20px;
-  }
-  .linkbox {
-    width: 100px;
-    height: 100px;
-    background-color: darkblue;
-    border: 8px solid black;
-    border-radius: 25px;
-  }
-  .boiler-plate-footer {
-    text-align: center;
-  }
-  #qpic1 {
-    background-position: left;
-    background-size: 33%;
-  }
-  #qpic2 {
-    background-size: 33%;
-  }
-  #qpic3 {
-    background-position: right;
-    background-size: 33%;
-  }
-}
 footer {
   position: absolute;
   z-index: 1;
@@ -959,6 +816,188 @@ footer .feet > div {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 500px) {
+  .site-shell {
+    background-color: var(--color-bg);
+    overflow: hidden;
+  }
+  .subtitle {
+    font-size: 16px;
+    right: 10%;
+  }
+  .stucco .guide {
+    justify-content: flex-start;
+  }
+  #guide-text {
+    left: 0;
+    bottom: -20px;
+    width: 180px;
+    font-size: 1rem;
+  }
+  .greeter {
+    padding: 4px 0px;
+    flex-direction: column-reverse;
+    max-width: 100vw;
+    align-items: center;
+  }
+  .greet-one,
+  .greet-two,
+  .greet-two > a > button {
+    max-width: 98vw;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .greet-menu {
+    display: none;
+  }
+  .greet-const {
+    max-width: 98vw;
+    overflow-x: visible;
+    padding-top: 1rem;
+  }
+  .greet-tab {
+    width: 300px;
+  }
+  .greet-tab > a > button {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .greet-tab > a > button > h2 {
+    font-size: 20px;
+  }
+  .greet-tab > a > button > p {
+    font-size: 16px;
+  }
+  .tag-line {
+    font-size: 0.8rem !important;
+  }
+  .greeter .greet-hours {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 40px;
+  }
+  .greeter .greet-hours .open-status {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  .greeter #expander {
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 0px solid black;
+  }
+  .padded {
+    padding: 85px 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .quote {
+    margin-left: 1rem;
+  }
+  .google-reviews-filled-in {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 20px;
+  }
+  .google-reviews-filled-in > h1 {
+    font-size: 1rem;
+  }
+  .quote-box {
+    max-width: 100%;
+    padding: 10px 0px 0px 0px;
+    height: 10vh;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .qpic {
+    border: 0;
+    background-repeat: no-repeat;
+    background-size: 33%;
+  }
+  .author {
+    font-size: 1rem;
+    bottom: 0;
+  }
+  #more-reviews {
+    transform: translateY(-100%);
+    width: 120px;
+    height: 35px;
+    bottom: 10vh;
+    right: calc(70vw - 60px);
+  }
+  .about-us {
+    max-width: calc(100vw - 48px);
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .about-text {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px 1rem;
+    margin: 0;
+    height: 100%;
+  }
+  .picture-us {
+    margin-top: 0;
+    width: 100%;
+    height: 180px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border: 0px;
+    border-bottom: 3px solid black;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .story-time {
+    padding: 0;
+    margin-top: 0.25rem;
+  }
+  .chapter4 {
+    gap: 20px;
+  }
+  .links {
+    gap: 20px;
+  }
+  .linkbox {
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    border: 8px solid black;
+    border-radius: 25px;
+  }
+  .boiler-plate-footer {
+    text-align: center;
+  }
+  #qpic1 {
+    background-position: left;
+    background-size: 33%;
+  }
+  #qpic2 {
+    background-size: 33%;
+  }
+  #qpic3 {
+    background-position: right;
+    background-size: 33%;
+  }
+}
 * {
   padding: 0;
   margin: 0px;
@@ -981,4 +1020,17 @@ footer .feet > div {
 
 .chapter3 {
   position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .greet-tab {
+    width: 300px;
+  }
+  .greet-tab > a > button {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .greet-tab > a > button > h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

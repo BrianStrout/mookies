@@ -1,10 +1,9 @@
-@use "mobile";
 @use "root";
 @use "header";
 @use "page1";
 @use "footer";
 @use "menulist";
-
+@use "mobile";
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=EB+Garamond&family=Indie+Flower&display=swap");
 
 * {
@@ -31,4 +30,19 @@
 
 .chapter3 {
   position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .greet-tab {
+    width: 300px;
+    > a > button {
+      width: 100px !important;
+      height: 100px !important;
+      // opacity: 0.5;
+      > h2 {
+        font-size: 20px;
+        // color: pink;
+      }
+    }
+  }
 }

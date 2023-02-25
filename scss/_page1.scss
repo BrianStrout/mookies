@@ -24,22 +24,7 @@
     transform: translateY(0);
     rotate: (0deg);
   }
-  // }
-  // 10% {
-  //   scale: 100%;
-  //   transform: translateY(0);
-  //   rotate: (20deg);
-  // }
-  // 25% {
-  //   scale: 100%;
-  //   transform: translateY(0);
-  //   rotate: (10deg);
-  // }
-  // 40% {
-  //   scale: 100%;
-  //   transform: translateY(0);
-  //   rotate: (20deg);
-  // }
+
   99% {
     scale: 100%;
     transform: translateY(150vh);
@@ -328,7 +313,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  // padding: 1rem;
 }
 .quote {
   position: absolute;

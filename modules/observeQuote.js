@@ -8,8 +8,8 @@ const quoteWatcher = new IntersectionObserver((entries, quoteWatcher) => {
       return;
     } else {
       console.log("should be setting interval");
-      setInterval(quoteUpdater, 2000);
-      quoteWatcher.unobserve(entry);
+
+      // quoteWatcher.unobserve(entry);
       return;
     }
   });
