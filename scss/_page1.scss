@@ -289,7 +289,12 @@
 .locals-dig-us-hero {
   position: relative;
   width: 100%;
-  height: max(30vh, 500px);
+  height: max(30vh, 700px);
+  // height: 100%;
+  mask: url("../images/maskbasic.png");
+  mask-mode: luminance;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
   background-image: url("../images/f\ rach.JPG");
   background-position: center;
   background-size: cover;
