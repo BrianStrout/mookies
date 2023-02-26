@@ -267,7 +267,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: max(30vh, 500px);
+  height: max(30vh, 700px);
   background-image: url("../images/chet-hero-edit.JPG");
   background-position: center bottom;
   background-size: cover;
@@ -364,6 +364,8 @@
   position: relative;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
+  display: flex;
+  justify-content: center;
   transform: translate(0, 0);
   transition: transform 0.5s ease-out;
 }
@@ -474,7 +476,14 @@
 .locals-dig-us-hero {
   position: relative;
   width: 100%;
-  height: max(30vh, 500px);
+  height: max(30vh, 700px);
+  -webkit-mask: url("../images/maskbasic.png");
+          mask: url("../images/maskbasic.png");
+  mask-mode: luminance;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
   background-image: url("../images/f rach.JPG");
   background-position: center;
   background-size: cover;
@@ -514,7 +523,7 @@
 .about-us-hero-1 {
   position: relative;
   width: 100%;
-  height: max(30vh, 500px);
+  height: max(30vh, 700px);
   background-image: url("../images/espresso.JPG");
   background-position: center;
   background-size: cover;
@@ -562,6 +571,7 @@
 }
 
 .picture-us {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -571,9 +581,6 @@
   min-width: 200px;
   background-size: contain;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 #signed {
@@ -816,7 +823,7 @@ footer .feet > div {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
   .site-shell {
     background-color: var(--color-bg);
     overflow: hidden;
@@ -903,6 +910,15 @@ footer .feet > div {
     flex-direction: column;
     align-items: center;
   }
+  .locals-dig-us-hero {
+    justify-content: center;
+    padding: 0;
+  }
+  .quote-frame {
+    border: 2px solid var(--color-ln);
+    width: 90%;
+    height: 200px;
+  }
   .quote {
     margin-left: 1rem;
   }
@@ -940,31 +956,28 @@ footer .feet > div {
     width: 120px;
     height: 35px;
     bottom: 10vh;
-    right: calc(70vw - 60px);
+    right: calc(50vw - 60px);
+  }
+  .chapter3 {
+    padding-top: 100px;
+  }
+  .about-us-hero-1 {
+    padding: 0;
   }
   .about-us {
-    max-width: calc(100vw - 48px);
+    max-width: 100%;
     padding-top: 0;
     margin-top: 0;
   }
   .about-text {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 10px 1rem;
     margin: 0;
     height: 100%;
-  }
-  .picture-us {
-    margin-top: 0;
     width: 100%;
-    height: 180px;
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    border: 0px;
-    border-bottom: 3px solid black;
-    border-radius: 15px 15px 0px 0px;
+    overflow: scroll;
+    background-color: rgba(228, 218, 209, 0.5058823529);
   }
   .story-time {
     padding: 0;
@@ -986,16 +999,24 @@ footer .feet > div {
   .boiler-plate-footer {
     text-align: center;
   }
-  #qpic1 {
-    background-position: left;
-    background-size: 33%;
+  .iframer-cont {
+    width: 100%;
+    height: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  #qpic2 {
-    background-size: 33%;
+  footer {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    padding: 0px;
+    padding-top: 16px;
   }
-  #qpic3 {
-    background-position: right;
-    background-size: 33%;
+  footer .feet {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 48px;
   }
 }
 * {
@@ -1020,17 +1041,4 @@ footer .feet > div {
 
 .chapter3 {
   position: relative;
-}
-
-@media only screen and (max-width: 500px) {
-  .greet-tab {
-    width: 300px;
-  }
-  .greet-tab > a > button {
-    width: 100px !important;
-    height: 100px !important;
-  }
-  .greet-tab > a > button > h2 {
-    font-size: 20px;
-  }
 }/*# sourceMappingURL=index.css.map */
