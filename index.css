@@ -476,21 +476,25 @@
 .locals-dig-us-hero {
   position: relative;
   width: 100%;
-  height: max(30vh, 700px);
-  -webkit-mask: url("../images/maskbasic.png");
-          mask: url("../images/maskbasic.png");
+  height: min(75vh, 700px);
+  -webkit-mask: url("../images/bigmaskspill2.png");
+          mask: url("../images/bigmaskspill2.png");
   mask-mode: luminance;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
+  -webkit-mask-position: bottom;
+          mask-position: bottom;
+  -webkit-mask-size: cover;
+          mask-size: cover;
   background-image: url("../images/f rach.JPG");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   padding-right: 5%;
+  padding-top: 5%;
 }
 
 .quote-frame {
@@ -517,15 +521,18 @@
 
 .chapter3 {
   position: relative;
-  padding-top: 25vh;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .about-us-hero-1 {
   position: relative;
   width: 100%;
-  height: max(30vh, 700px);
-  background-image: url("../images/espresso.JPG");
-  background-position: center;
+  height: 85vh;
+  background-image: url("../images/espressoclipped.png");
+  background-position: top;
   background-size: cover;
   padding-right: 5%;
 }
@@ -661,6 +668,9 @@
 
 .chapter2 {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .chapter4 {
