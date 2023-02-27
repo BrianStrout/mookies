@@ -23,6 +23,12 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: var(--handwriting);
+      color: whitesmoke;
+      a {
+        color: whitesmoke;
+        text-decoration: underline;
+      }
     }
   }
 }

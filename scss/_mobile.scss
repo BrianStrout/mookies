@@ -67,10 +67,11 @@
   }
   .greeter .greet-hours {
     position: absolute;
-    width: 150px;
+    width: fit-content;
     height: 50px;
     padding-left: 10px;
     padding-right: 40px;
+    border-bottom: 3px solid var(--color-ln);
   }
 
   .greeter .greet-hours .open-status {
@@ -98,7 +99,7 @@
   }
 
   .padded {
-    padding: 85px 1.5rem;
+    padding: 85px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,7 +107,12 @@
 
   .locals-dig-us-hero {
     justify-content: center;
+    align-items: flex-start;
     padding: 0;
+    padding: 20vh 1.5rem 85px 1.5rem;
+    background-position: left;
+    mask-position: right 50%;
+    // padding-bottom: ;
   }
 
   .quote-frame {
@@ -163,6 +169,8 @@
 
   .about-us-hero-1 {
     padding: 0;
+
+    background-position: left;
   }
 
   .about-us {

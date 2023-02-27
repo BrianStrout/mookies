@@ -1,7 +1,5 @@
 @use "root";
-.chapter2 {
-  position: relative;
-}
+
 .screen {
   position: absolute;
   z-index: 50;
@@ -111,7 +109,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 250px;
+    z-index: 5;
+    width: fit-content;
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -120,7 +119,10 @@
     background-color: var(--color-btn);
     padding-left: 10px;
     padding-right: 30px;
+    border-bottom: 3px solid var(--color-ln);
     .open-status {
+      // position: absolute;
+
       width: 100%;
       display: flex;
       justify-content: center;
@@ -136,9 +138,12 @@
 
   #daysAndHours {
     position: absolute;
-    z-index: 2;
-    top: 100%;
-    background-color: var(--color-ac);
+    z-index: 0;
+    top: 105%;
+    // background-color: var(--color-ac);
+    background-color: var(--color-btn);
+    border: 3px dashed var(--color-ln);
+    border-top: 3px solid var(--color-ln);
     list-style: none;
     border-radius: 3px;
     font-size: 1.25rem;
@@ -146,6 +151,9 @@
     color: white;
     padding-left: 20px;
     padding-right: 20px;
+    li {
+      color: var(--color-ac);
+    }
   }
   .untucked {
     max-height: 500px;
@@ -323,6 +331,7 @@
   position: absolute;
   font-size: 1.5rem;
   margin: 1rem;
+  font-family: var(--handwriting);
 }
 .quote-up {
   transform: translateY(0);
@@ -333,21 +342,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background: linear-gradient(
+    var(--color-tx),
+    var(--color-bg),
+    var(--color-bg)
+  );
 }
 .about-us-hero-1 {
   position: relative;
   width: 100%;
-  // height: min(80vh, 700px);
   height: 85vh;
-  background-image: url("../images/espressoclipped.png");
+  background-image: url("../images/espressoclipped3.png");
   background-position: top;
   background-size: cover;
   padding-right: 5%;
-  // mask: url("../images/espressomask.png");
-  // mask-mode: luminance;
-  // mask-repeat: no-repeat;
-  // mask-position: bottom;
-  // mask-size: cover;
 }
 
 .custom-shape-divider-bottom-1673554835 {
@@ -445,7 +453,6 @@
   background-color: var(--color-btn);
   border: 3px solid var(--color-ln);
   border-radius: var(--border-rad);
-  font-family: var(--handwriting);
 }
 .author {
   position: absolute;
@@ -455,30 +462,12 @@
   color: var(--color-ac);
 }
 
-#qpic1 {
-  background: url("../images/m1.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#qpic2 {
-  background: url("../images/m2.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#qpic3 {
-  background: url("../images/m3.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .chapter2 {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background: linear-gradient(var(--color-bg), var(--color-tx));
 }
 .chapter4 {
   position: relative;
