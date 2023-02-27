@@ -180,19 +180,6 @@
     overflow: scroll;
     background-color: #e4dad181;
   }
-  // .picture-us {
-  //   margin-top: 0;
-  //   width: 100%;
-  //   // margin-left: 10%;
-  //   height: 180px;
-  //   aspect-ratio: 1/1;
-  //   background-repeat: no-repeat;
-  //   background-position: top center;
-  //   background-size: cover;
-  //   border: 0px;
-  //   border-bottom: 3px solid black;
-  //   border-radius: 15px 15px 0px 0px;
-  // }
   .story-time {
     padding: 0;
     margin-top: 0.25rem;
@@ -216,19 +203,6 @@
     text-align: center;
   }
 
-  // #qpic1 {
-  //   background-position: left;
-
-  //   background-size: 33%;
-  // }
-  // #qpic2 {
-  //   background-size: 33%;
-  // }
-  // #qpic3 {
-  //   background-position: right;
-  //   background-size: 33%;
-  // }
-
   .iframer-cont {
     width: 100%;
     height: 600px;
@@ -247,9 +221,6 @@
       width: 100%;
       flex-direction: column;
       padding-bottom: 48px;
-      > div {
-        // border: 1px solid black;
-      }
     }
   }
 }
