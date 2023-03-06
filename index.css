@@ -54,7 +54,7 @@
   height: var(--vw-padding);
   min-width: 32px;
   min-height: 32px;
-  border: 0.5vw solid black;
+  border: 0.3vw solid black;
   font-size: 4vw;
   font-family: var(--fun-font);
   transform: translateY(-20vh);
@@ -182,7 +182,7 @@
 .link-box .coffee-cup {
   width: 100%;
   height: 100%;
-  background: url("../images/hithere/hithere3.png");
+  background: url("../images/motop.png");
   background-size: contain;
   background-position: center;
 }
@@ -309,7 +309,7 @@
   align-items: flex-start;
   background-color: var(--color-btn);
   padding-left: 10px;
-  padding-right: 30px;
+  padding-right: 50px;
   border-bottom: 3px solid var(--color-ln);
 }
 .greeter .greet-hours .open-status {
@@ -338,7 +338,7 @@
   padding-right: 20px;
 }
 .greeter #daysAndHours li {
-  color: var(--color-ac);
+  color: black;
 }
 .greeter .untucked {
   max-height: 500px;
