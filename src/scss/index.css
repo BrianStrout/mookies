@@ -404,6 +404,7 @@
   text-shadow: 1px 1px white;
   border: 3px solid var(--color-ln);
   border-radius: 50%;
+  overflow: visible;
 }
 .greeter .greet-tab > a > button p {
   color: black;
@@ -1012,7 +1013,7 @@ footer .feet > div a {
   }
   .iframer-cont {
     width: 100%;
-    height: 600px;
+    height: 40vh;
     margin-left: 10%;
     margin-right: 10%;
   }

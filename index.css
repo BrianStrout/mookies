@@ -52,8 +52,8 @@
   align-items: center;
   width: var(--vw-padding);
   height: var(--vw-padding);
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 32px;
+  min-height: 32px;
   border: 0.5vw solid black;
   font-size: 4vw;
   font-family: var(--fun-font);
@@ -156,7 +156,7 @@
 }
 .stucco {
   position: fixed;
-  left: max(2.5vw + 5px + var(--vw-padding), 53px);
+  left: max(2.5vw + 5px + var(--vw-padding), 45px);
   /* color: pink; */
   background: url("../images/mookiedoggo.png");
   background-size: contain;
@@ -182,7 +182,7 @@
 .link-box .coffee-cup {
   width: 100%;
   height: 100%;
-  background: url("../images/trans-mookieslogo.png");
+  background: url("../images/hithere/hithere3.png");
   background-size: contain;
   background-position: center;
 }
@@ -404,6 +404,7 @@
   text-shadow: 1px 1px white;
   border: 3px solid var(--color-ln);
   border-radius: 50%;
+  overflow: visible;
 }
 .greeter .greet-tab > a > button p {
   color: black;
@@ -832,7 +833,7 @@ footer .feet > div a {
     overflow: hidden;
   }
   .subtitle {
-    font-size: 16px;
+    font-size: 12px;
     right: 10%;
   }
   .stucco .guide {
@@ -876,7 +877,7 @@ footer .feet > div a {
     font-size: 20px;
   }
   .greet-tab > a > button > p {
-    font-size: 16px;
+    font-size: 12px;
   }
   .tag-line {
     font-size: 0.8rem !important;
@@ -993,6 +994,7 @@ footer .feet > div a {
   .story-time {
     padding: 0;
     margin-top: 0.25rem;
+    font-size: 16px;
   }
   .chapter4 {
     gap: 20px;
@@ -1012,7 +1014,7 @@ footer .feet > div a {
   }
   .iframer-cont {
     width: 100%;
-    height: 600px;
+    height: 50vh;
     margin-left: 10%;
     margin-right: 10%;
   }
